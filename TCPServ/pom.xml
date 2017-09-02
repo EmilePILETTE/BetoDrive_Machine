@@ -4,6 +4,11 @@
 	<groupId>com.mycompany</groupId>
 	<artifactId>TCPServ</artifactId>
 	<version>1.0-SNAPSHOT</version>
+	<parent>
+		<groupId>com.mycompany</groupId>
+		<artifactId>BetoDrive_Machine</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
 	<packaging>jar</packaging>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

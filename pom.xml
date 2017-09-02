@@ -6,13 +6,22 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>../../GitHub/BetoDrive_Machine/SimuBasculeCiment</module>
-		<module>../../GitHub/BetoDrive_Machine/SimuBasculeEau</module>
-		<module>../../GitHub/BetoDrive_Machine/SimuMalaxeur</module>
-		<module>../../GitHub/BetoDrive_Machine/SimuSkipTremies</module>
-		<module>../../GitHub/BetoDrive_Machine/TCPServ</module>
+		<module>SimuBasculeCiment</module>
+		<module>SimuBasculeEau</module>
+		<module>SimuMalaxeur</module>
+		<module>SimuSkipTremies</module>
+		<module>TCPServ</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.2</version>
+			</plugin>
+		</plugins>
+	</build>
 </project>
