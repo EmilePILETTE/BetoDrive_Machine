@@ -1,0 +1,159 @@
+Environment variables:
+  - =::=::\
+  - =C:=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - ALLUSERSPROFILE=C:\ProgramData
+  - APPDATA=C:\Users\Clément\AppData\Roaming
+  - CLASSWORLDS_JAR="C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..\boot\plexus-classworlds-2.5.2.jar"
+  - CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
+  - COMPUTERNAME=CLÉMENT-PC
+  - ComSpec=C:\Windows\system32\cmd.exe
+  - CommonProgramFiles=C:\Program Files\Common Files
+  - CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+  - CommonProgramW6432=C:\Program Files\Common Files
+  - ERROR_CODE=0
+  - EXEC_DIR=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - FP_NO_HOST_CHECK=NO
+  - HOMEDRIVE=C:
+  - HOMEPATH=\Users\Clément
+  - JAVACMD=C:\Program Files\Java\jdk1.8.0_121\bin\java.exe
+  - JAVA_HOME=C:\Program Files\Java\jdk1.8.0_121
+  - LOCALAPPDATA=C:\Users\Clément\AppData\Local
+  - LOGONSERVER=\\CLÉMENT-PC
+  - M2_HOME=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0
+  - MAVEN_CMD_LINE_ARGS=-Dmaven.ext.class.path="C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar" -Dfile.encoding=UTF-8 --debug -X sonar:sonar
+  - MAVEN_HOME=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..
+  - MAVEN_PROJECTBASEDIR=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - NB_EXEC_MAVEN_PROCESS_UUID=11bd2924-b93f-49b2-aadd-f018c5dd6083
+  - NUMBER_OF_PROCESSORS=4
+  - OS=Windows_NT
+  - PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  - PROCESSOR_ARCHITECTURE=AMD64
+  - PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+  - PROCESSOR_LEVEL=6
+  - PROCESSOR_REVISION=3a09
+  - PROMPT=$P$G
+  - PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+  - PUBLIC=C:\Users\Public
+  - Path=C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\PostgreSQL\pg96\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\texlive\2016\bin\win32
+  - ProgramData=C:\ProgramData
+  - ProgramFiles=C:\Program Files
+  - ProgramFiles(x86)=C:\Program Files (x86)
+  - ProgramW6432=C:\Program Files
+  - SESSIONNAME=Console
+  - SystemDrive=C:
+  - SystemRoot=C:\Windows
+  - TEMP=C:\Users\CLMENT~1\AppData\Local\Temp
+  - TMP=C:\Users\CLMENT~1\AppData\Local\Temp
+  - USERDOMAIN=Clément-PC
+  - USERNAME=Clément
+  - USERPROFILE=C:\Users\Clément
+  - WDIR=C:\
+  - docear_bibtex_current=C:\Users\Clément\Documents\Beton\_data\15D35F54AFD9J3KXPGFUIPP53IR49A4NQ98S\default_files\Sceduling.bib
+  - jvmConfig=\.mvn\jvm.config
+  - windir=C:\Windows
+  - windows_tracing_flags=3
+  - windows_tracing_logfile=C:\BVTBin\Tests\installpackage\csilogfile.log
+System properties:
+  - awt.toolkit=sun.awt.windows.WToolkit
+  - classworlds.conf=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..\bin\m2.conf
+  - file.encoding=UTF-8
+  - file.encoding.pkg=sun.io
+  - file.separator=\
+  - guice.disable.misplaced.annotation.check=true
+  - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+  - java.awt.printerjob=sun.awt.windows.WPrinterJob
+  - java.class.path=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..\boot\plexus-classworlds-2.5.2.jar
+  - java.class.version=52.0
+  - java.endorsed.dirs=C:\Program Files\Java\jdk1.8.0_121\jre\lib\endorsed
+  - java.ext.dirs=C:\Program Files\Java\jdk1.8.0_121\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+  - java.home=C:\Program Files\Java\jdk1.8.0_121\jre
+  - java.io.tmpdir=C:\Users\CLMENT~1\AppData\Local\Temp\
+  - java.library.path=C:\Program Files\Java\jdk1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\PostgreSQL\pg96\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\texlive\2016\bin\win32;.
+  - java.runtime.name=Java(TM) SE Runtime Environment
+  - java.runtime.version=1.8.0_121-b13
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=1.8
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=http://java.oracle.com/
+  - java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+  - java.version=1.8.0_121
+  - java.vm.info=mixed mode
+  - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=1.8
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=25.121-b13
+  - library.jansi.path=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..\lib\jansi-native\windows64
+  - line.separator=
+
+  - maven.conf=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\../conf
+  - maven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar
+  - maven.home=C:\Users\Clément\Documents\Dev\apache-maven-3.5.0\bin\..
+  - maven.multiModuleProjectDirectory=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - org.slf4j.simpleLogger.defaultLogLevel=debug
+  - os.arch=amd64
+  - os.name=Windows 7
+  - os.version=6.1
+  - path.separator=;
+  - sun.arch.data.model=64
+  - sun.boot.class.path=C:\Program Files\Java\jdk1.8.0_121\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_121\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_121\jre\classes
+  - sun.boot.library.path=C:\Program Files\Java\jdk1.8.0_121\jre\bin
+  - sun.cpu.endian=little
+  - sun.cpu.isalist=amd64
+  - sun.desktop=windows
+  - sun.io.unicode.encoding=UnicodeLittle
+  - sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans 8.2\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 --debug -X sonar:sonar
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=Cp1252
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - sun.os.patch.level=Service Pack 1
+  - user.country=FR
+  - user.dir=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - user.home=C:\Users\Clément
+  - user.language=fr
+  - user.name=Clément
+  - user.script=
+  - user.timezone=Europe/Paris
+  - user.variant=
+SonarQube plugins:
+  - C# 5.10.1.1411 (csharp)
+  - SonarPython 1.8.0.1496 (python)
+  - SonarJava 4.12.0.11033 (java)
+  - Flex 2.3 (flex)
+  - Git 1.2 (scmgit)
+  - SonarXML 1.4.3.1027 (xml)
+  - SonarPHP 2.10.0.2087 (php)
+  - SVN 1.5.0.715 (scmsvn)
+  - SonarJS 3.1.1.5128 (javascript)
+Global properties:
+  - sonar.core.id=AV5DCbjVBjL3RM29zVAk
+  - sonar.core.startTime=2017-09-02T16:41:03+0200
+Settings for module: com.mycompany:SimuBasculeEau
+  - sonar.binaries=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\classes
+  - sonar.groovy.binaries=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\classes
+  - sonar.host.url=http://localhost:9000
+  - sonar.java.binaries=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\classes
+  - sonar.java.libraries=C:\Users\Clément\.m2\repository\org\jdom\jdom\2.0.2\jdom-2.0.2.jar
+  - sonar.java.source=1.8
+  - sonar.java.target=1.8
+  - sonar.java.test.binaries=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\test-classes
+  - sonar.java.test.libraries=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\classes,C:\Users\Clément\.m2\repository\org\jdom\jdom\2.0.2\jdom-2.0.2.jar
+  - sonar.libraries=C:\Users\Clément\.m2\repository\org\jdom\jdom\2.0.2\jdom-2.0.2.jar
+  - sonar.links.ci=
+  - sonar.links.homepage=
+  - sonar.links.issue=
+  - sonar.links.scm=
+  - sonar.links.scm_dev=
+  - sonar.maven.projectDependencies=[{"k":"org.jdom:jdom","v":"2.0.2","s":"compile","d":[]}]
+  - sonar.moduleKey=com.mycompany:SimuBasculeEau
+  - sonar.projectBaseDir=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau
+  - sonar.projectBuildDir=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target
+  - sonar.projectKey=com.mycompany:SimuBasculeEau
+  - sonar.projectName=SimuBasculeEau
+  - sonar.projectVersion=1.0-SNAPSHOT
+  - sonar.sourceEncoding=UTF-8
+  - sonar.sources=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\pom.xml,C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\src\main\java
+  - sonar.tests=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\src\test\java
+  - sonar.working.directory=C:\Users\Clément\Documents\NetBeansProjects\SimuBasculeEau\target\sonar

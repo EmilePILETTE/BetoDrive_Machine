@@ -1,0 +1,6 @@
+projectKey=com.mycompany:SimuBasculeCiment
+serverUrl=http://localhost:9000
+serverVersion=6.5.0.27846
+dashboardUrl=http://localhost:9000/dashboard/index/com.mycompany:SimuBasculeCiment
+ceTaskId=AV5DHYXaBjL3RM29zVvL
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AV5DHYXaBjL3RM29zVvL
