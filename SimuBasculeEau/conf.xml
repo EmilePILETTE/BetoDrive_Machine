@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<ip>127.0.0.1</ip>
+	<port>50000</port>
+        <Name>BasculeEau</Name>
+        <panelElement>
+            <Element1>
+                <name>Pompe à Eau</name>
+                <value>off</value>
+                <unit> </unit>
+                <commande>eau</commande>
+            </Element1>
+            <Element2>
+                <name>Pompe à Adjuvants</name>
+                <value>off</value>
+                <unit> </unit>
+                <commande>adj</commande>
+            </Element2>
+            <Element3>
+                <name>Porte</name>
+                <value>off</value>
+                <unit> </unit>
+                <commande>door</commande>
+            </Element3>
+            <Element4>
+                <name>Poids</name>
+                <value>0</value>
+                <unit>kg</unit>
+                <commande>out</commande>
+            </Element4>  
+        </panelElement>
+</config>

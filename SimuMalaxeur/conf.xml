@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<ip>127.0.0.1</ip>
+	<port>50000</port>
+        <Name>Malaxeur</Name>
+        <panelElement>
+            <Element1>
+                <name>Ampérage</name>
+                <value>0</value>
+                <unit>A</unit>
+                <commande>amp</commande>
+            </Element1>
+            <Element2>
+                <name>Porte</name>
+                <value>off</value>
+                <unit> </unit>
+                <commande>door</commande>
+            </Element2>
+        </panelElement>
+</config>
