@@ -1,1 +1,0 @@
-SimuBasculeCiment :J1.0-SNAPSHOTRcom.mycompany:SimuBasculeCiment
