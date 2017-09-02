@@ -1,0 +1,4 @@
+/target/
+*.class
+*.class
+SimuBasculeCiment/target/classes/DataModel/TCPDataBufferIn.class
