@@ -8,3 +8,10 @@ SimuBasculeCiment/target/classes/TCPDriver/Reception.class
 SimuBasculeCiment/target/classes/DataModel/TCPDataBufferIn.class
 target
 SimuSkipTremies
+maven-archiver
+classes
+generated-sources
+maven-status
+sonar
+test-classes
+TCPServ-1.0-SNAPSHOT.jar
