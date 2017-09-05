@@ -1,6 +1,6 @@
 
-import TCPDriver.Server;
 import DataModel.TCPDataMultiplexer;
+import TCPDriver.Server;
 import java.net.ServerSocket;
 
 public class Automate {
@@ -40,7 +40,7 @@ public class Automate {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+
 			}
 		}
 	}
@@ -72,7 +72,7 @@ public class Automate {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+
 			}
 		}
 		for (int i = 0; i < InOutBuffer.getName().size(); i++) {
@@ -92,7 +92,7 @@ public class Automate {
 					Thread.sleep(100);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+
 				}
 			}
 		}
@@ -126,11 +126,7 @@ public class Automate {
 					readCmd(numBaculeCiment);
 					System.out.print("Poids de la bascule à ciment :");
 					System.out.println(Integer.parseInt(capteurRead.split(";")[0].split(":")[1]));
-					if ((Integer.parseInt(capteurRead.split(";")[0].split(":")[1]) >= poidsCiment)) {
-						poidsCimentAtteind = true;
-					} else {
-						poidsCimentAtteind = false;
-					}
+					poidsCimentAtteind = (Integer.parseInt(capteurRead.split(";")[0].split(":")[1]) >= poidsCiment);
 					if (!finCiment && poidsCimentAtteind) {
 						sendCmd(numBaculeCiment, "cim:off;");
 					}
@@ -191,11 +187,7 @@ public class Automate {
 					if (capteurRead.split(";")[0].split(":")[0].matches("Position")) {
 						System.out.print("Position du skip : ");
 						System.out.println(capteurRead.split(";")[0].split(":")[1]);
-						if (capteurRead.split(";")[0].split(":")[1].matches("top")) {
-							positionSkip = true;
-						} else {
-							positionSkip = false;
-						}
+						positionSkip = capteurRead.split(";")[0].split(":")[1].matches("top");
 					}
 					if (poidsSableAtteind) {
 						sendCmd(numSkipTremies, "door:off;");
@@ -239,9 +231,9 @@ public class Automate {
 						finMalaxeur = true;
 					}
 				}
-			} catch (Exception e) {
+			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+
 			}
 		}
 	}

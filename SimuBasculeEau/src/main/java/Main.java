@@ -4,10 +4,11 @@ import DataModel.TCPDataBufferOut;
 import TCPDriver.Connector;
 import View.Vue;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 public class Main {
@@ -30,7 +31,7 @@ public class Main {
 		t1.setStatut("Init");
 		try {
 			document = sxb.build(new File("conf.xml"));
-		} catch (Exception e) {
+		} catch (IOException | JDOMException e) {
 			System.out.println("Error in xml file");
 		}
 		racine = document.getRootElement();
@@ -38,13 +39,12 @@ public class Main {
 		t1.setPort(racine.getChild("port").getValue());
 		pannelElements = racine.getChild("panelElement");
 		name = racine.getChild("Name").getText();
-		for (Iterator it = pannelElements.getChildren().iterator(); it.hasNext();) {
-			Element pane = (Element) it.next();
+		pannelElements.getChildren().forEach((pane) -> {
 			ListElement.add(new String[]{pane.getChild("name").getValue(),
 				pane.getChild("value").getValue(),
 				pane.getChild("unit").getValue(),
 				pane.getChild("commande").getValue()});
-		}
+		});
 		Vue = new Vue(name);
 		Vue.setStatut(t1.getStatut());
 		Vue.RedOn();
@@ -56,7 +56,6 @@ public class Main {
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
 			}
 		}
 		System.err.println("Send name : " + name);
@@ -66,7 +65,6 @@ public class Main {
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
 			}
 			if (TCPdataIn.isDataRdy()) {
 				System.out.println("Main get data : " + TCPdataIn.getData());
@@ -101,13 +99,13 @@ public class Main {
 				}).map((_item) -> {
 					TCPdataOut.setDataRdy(true);
 					return _item;
-				}).forEachOrdered((_item) -> {
+				}).forEachOrdered((String[] _item) -> {
 					while (TCPdataOut.isDataRdy()) {
 						try {
 							Thread.sleep(100);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
+
 						}
 					}
 				});

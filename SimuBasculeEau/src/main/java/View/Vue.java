@@ -2,11 +2,10 @@ package View;
 
 import java.awt.Color;
 import java.awt.GridLayout;
-
+import java.util.HashMap;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import java.util.HashMap;
 
 public class Vue extends JFrame {
 
@@ -69,12 +68,12 @@ public class Vue extends JFrame {
 	}
 
 	public void editHashMapValue(String key, String value) {
-		for (HashMap.Entry<JLabel, JLabel> entry : LabelMap.entrySet()) {
-			if (entry.getKey().getText() == key) {
-				entry.getKey().setText(key);
-				entry.getValue().setText(value);
-			}
-		}
+		LabelMap.entrySet().stream().filter((entry) -> (entry.getKey().getText() == null ? key == null : entry.getKey().getText().equals(key))).map((entry) -> {
+			entry.getKey().setText(key);
+			return entry;
+		}).forEachOrdered((entry) -> {
+			entry.getValue().setText(value);
+		});
 	}
 
 	public void setStatut(String Statut) {

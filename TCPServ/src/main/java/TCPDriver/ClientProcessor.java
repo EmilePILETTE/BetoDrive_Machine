@@ -27,6 +27,7 @@ public class ClientProcessor extends Thread {
 	}
 
 	//Le traitement lancé dans un thread séparé
+	@Override
 	public void run() {
 		System.err.println("Lancement du traitement de la connexion cliente");
 
@@ -82,7 +83,6 @@ public class ClientProcessor extends Thread {
 			System.err.println("LA CONNEXION A ETE INTERROMPUE ! ");
 			sock.isClosed();
 		} catch (IOException e) {
-			e.printStackTrace();
 			System.err.println("Err ; fermeture connexion");
 			sock.isClosed();
 		}
@@ -90,7 +90,7 @@ public class ClientProcessor extends Thread {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+
 		}
 		t2 = new Emission(writer, InOutBuffer, multiplexerLineNumber);
 		t2.start();
@@ -103,7 +103,7 @@ public class ClientProcessor extends Thread {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+
 				}
 				if (closeConnexion) {
 					System.err.println("COMMANDE CLOSE DETECTEE ! ");
@@ -118,7 +118,6 @@ public class ClientProcessor extends Thread {
 				closeConnexion = true;
 				break;
 			} catch (IOException e) {
-				e.printStackTrace();
 				closeConnexion = true;
 			}
 		}

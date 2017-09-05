@@ -91,10 +91,10 @@ public class Connector extends Thread {
 						this.sleep(5000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
-						e.printStackTrace();
+
 					}
 				}
-			} catch (Exception e) {
+			} catch (IOException | NumberFormatException e) {
 				this.setStatut("Disonnected");
 				System.out.println(this.getStatut());
 				try {
@@ -103,7 +103,6 @@ public class Connector extends Thread {
 					// TODO Auto-generated catch block
 					System.out.println("Can't close socket");
 				}
-				e.printStackTrace();
 			}
 		}
 	}

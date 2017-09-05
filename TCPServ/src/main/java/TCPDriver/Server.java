@@ -31,9 +31,7 @@ public class Server {
 		try {
 			server = new ServerSocket(port, 100, InetAddress.getByName(host));
 		} catch (UnknownHostException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 
@@ -44,9 +42,7 @@ public class Server {
 		try {
 			server = new ServerSocket(port, 100, InetAddress.getByName(host));
 		} catch (UnknownHostException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
-			e.printStackTrace();
 		}
 	}
 
@@ -124,7 +120,7 @@ public class Server {
 							Thread.sleep(1000);
 						} catch (InterruptedException e) {
 							// TODO Auto-generated catch block
-							e.printStackTrace();
+
 						}
 						Thread t1 = new Thread(new Emission(writer, InOutBuffer, multiplexerLineNumber));
 						t1.start();
@@ -135,7 +131,6 @@ public class Server {
 						System.err.println("LA CONNEXION A ETE INTERROMPUE ! ");
 						server.isClosed();
 					} catch (IOException e) {
-						e.printStackTrace();
 						System.err.println("Err ; fermeture connexion");
 						server.isClosed();
 					}
@@ -144,7 +139,6 @@ public class Server {
 				try {
 					server.close();
 				} catch (IOException e) {
-					e.printStackTrace();
 					server = null;
 				}
 			}

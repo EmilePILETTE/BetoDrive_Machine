@@ -4,9 +4,11 @@ import DataModel.TCPDataBufferOut;
 import TCPDriver.Connector;
 import View.Vue;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import org.jdom2.Document;
 import org.jdom2.Element;
+import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
 
 public class Main {
@@ -29,7 +31,7 @@ public class Main {
 		t1.setStatut("Init");
 		try {
 			document = sxb.build(new File("conf.xml"));
-		} catch (Exception e) {
+		} catch (IOException | JDOMException e) {
 			System.out.println("Error in xml file");
 		}
 		racine = document.getRootElement();
@@ -37,24 +39,23 @@ public class Main {
 		t1.setPort(racine.getChild("port").getValue());
 		pannelElements = racine.getChild("panelElement");
 		name = racine.getChild("Name").getText();
-		for (Element pane : pannelElements.getChildren()) {
+		pannelElements.getChildren().forEach((pane) -> {
 			ListElement.add(new String[]{pane.getChild("name").getValue(),
 				pane.getChild("value").getValue(),
 				pane.getChild("unit").getValue(),
 				pane.getChild("commande").getValue()});
-		}
+		});
 		Vue = new Vue(name);
 		Vue.setStatut(t1.getStatut());
 		Vue.RedOn();
-		for (String[] n : ListElement) {
+		ListElement.forEach((n) -> {
 			Vue.putHashMapValue(n[0], n[1] + n[2]);
-		}
+		});
 		t1.start();
 		while (!t1.getStatut().matches("Connected")) {
 			try {
 				Thread.sleep(200);
 			} catch (InterruptedException e) {
-				e.printStackTrace();
 			}
 		}
 		System.err.println("Send name : " + name);
@@ -73,12 +74,12 @@ public class Main {
 							((Vue) Vue).GreenOn();
 						}
 					} else {
-						for (String[] n : ListElement) {
-							if (DataRcvE.split(":")[0].matches(n[3])) {
-								n[1] = DataRcvE.split(":")[1];
-								Vue.editHashMapValue(n[0], n[1]);
-							}
-						}
+						ListElement.stream().filter((n) -> (DataRcvE.split(":")[0].matches(n[3]))).map((n) -> {
+							n[1] = DataRcvE.split(":")[1];
+							return n;
+						}).forEachOrdered((n) -> {
+							Vue.editHashMapValue(n[0], n[1]);
+						});
 					}
 				}
 				TCPdataIn.setData("");
@@ -86,20 +87,22 @@ public class Main {
 			} else {
 				Vue.setStatut(t1.getStatut());
 				//Envoi des données de sorties qui sont identifiées avec la commande out
-				for (String[] n : ListElement) {
-					if (n[3].matches("out") && !TCPdataOut.isDataRdy()) {
-						TCPdataOut.setBuffer((n[0] + ":" + n[1] + ";").toCharArray());
-						TCPdataOut.setDataRdy(true);
-						while (TCPdataOut.isDataRdy()) {
-							try {
-								Thread.sleep(100);
-							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
+				ListElement.stream().filter((n) -> (n[3].matches("out") && !TCPdataOut.isDataRdy())).map((n) -> {
+					TCPdataOut.setBuffer((n[0] + ":" + n[1] + ";").toCharArray());
+					return n;
+				}).map((_item) -> {
+					TCPdataOut.setDataRdy(true);
+					return _item;
+				}).forEachOrdered((_item) -> {
+					while (TCPdataOut.isDataRdy()) {
+						try {
+							Thread.sleep(100);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+
 						}
 					}
-				}
+				});
 				//Si la commande de pompes à eau est allumé alors le poids monte
 				if (ListElement.get(1)[1].matches("on")) {
 					ListElement.get(0)[1] = "0";
@@ -108,7 +111,6 @@ public class Main {
 				try {
 					Thread.sleep(200);
 				} catch (InterruptedException e) {
-					e.printStackTrace();
 				}
 			}
 		}
