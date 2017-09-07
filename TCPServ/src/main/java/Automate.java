@@ -213,23 +213,25 @@ public class Automate {
 					}
 				}
 				if (numMalaxeur != -1) {
-					if (finMalaxeur) {
-						sendCmd(numMalaxeur, "door:off;");
-					}
-					if (malaxeurStep == 1) {
-						sendCmd(numMalaxeur, "amp:50;");
-					}
-					if (malaxeurStep == 2) {
-						sendCmd(numMalaxeur, "amp:100;");
-					}
-					if (malaxeurStep == 3) {
-						sendCmd(numMalaxeur, "amp:150;");
-						malaxeurStep = 0;
-					}
-					if (finCiment && finEauAdjuvants && finSable && !finMalaxeur) {
-						sendCmd(numMalaxeur, "door:on;");
-						finMalaxeur = true;
-					}
+				    if (finMalaxeur) {
+					sendCmd(numMalaxeur, "door:off;");
+					sendCmd(numMalaxeur, "amp:0;");
+				    }
+				    if (malaxeurStep == 1) {
+					sendCmd(numMalaxeur, "amp:50;");
+				    }
+				    if (malaxeurStep == 2) {
+					sendCmd(numMalaxeur, "amp:100;");
+				    }
+				    if (malaxeurStep == 3) {
+					sendCmd(numMalaxeur, "amp:150;");
+					malaxeurStep = 0;
+				    }
+				    if (finCiment && finEauAdjuvants && finSable && !finMalaxeur) {
+					sendCmd(numMalaxeur, "door:on;");
+					sendCmd(numMalaxeur, "amp:0;");
+					finMalaxeur = true;
+				    }
 				}
 			} catch (NumberFormatException e) {
 				// TODO Auto-generated catch block
